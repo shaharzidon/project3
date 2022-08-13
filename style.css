@@ -3,6 +3,7 @@
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
 }
+
 /* hamburger section */
 
 .hamburgerNav
@@ -11,9 +12,16 @@
   margin: 0;
   padding: 0;
   
-  background: #232323;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
+  position: fixed;
+  width: 0px;
+  height: 0px;
+  bottom: 0px;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 999;
 }
 
 #menuToggle
@@ -39,14 +47,14 @@
 
 #menuToggle a:hover
 {
-  color: tomato;
+  color: #9395D3;
 }
 
 
 #menuToggle input
 {
   display: block;
-  width: 40px;
+  width: 100px;
   height: 32px;
   position: absolute;
   top: -7px;
@@ -112,8 +120,8 @@
 
 #menu
 {
-  position: absolute;
-  width: 300px;
+  position: fixed;
+  width: 125vw;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -140,11 +148,34 @@
 {
   transform: none;
 }
-*/
+
+@media screen and (max-width: 768px) {
+  .hamburgerNav{
+    visibility: visible;
+  }
+}
+
+
  /* body section */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 125vw;
+  }
 }
 
 /* nav-bar section */
@@ -153,7 +184,7 @@ body {
     background-color: #FBF9FF;
     position: fixed;
     width: 100%;
-    z-index: 200;
+    z-index: 999;
     visibility: visible;
   }
   
@@ -248,9 +279,10 @@ display: block;
 
   .home .home-info{
     font-size: x-large;
+    text-align: center;
   }
 
-  .container{
+  .home .container{
       width: 100%;
       height: auto;
       display: flex;
@@ -261,6 +293,7 @@ display: block;
 
   .home .home-info .home-info-button {
     margin-top: 30px;
+    margin-bottom: 30px;
     padding: 2rem 5rem;
     display: inline-block;
     font-size: 1.6rem;
@@ -270,7 +303,8 @@ display: block;
     letter-spacing: .6rem;
     background-color: #B3B7EE;
     transition: all .3s ease;
-    border: #9395D3 1px solid;
+    width: 360px;
+
 }
 
 .home .home-info .home-info-button:hover {
@@ -288,6 +322,25 @@ display: block;
 width: 80vw;
 height:40vh;
   }
+
+  .home .home-info .home-info-button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 2rem 5rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: .6rem;
+    background-color: #B3B7EE;
+    transition: all .3s ease;
+    border: #9395D3 1px solid;
+  }
+  
+  .home .home-info .home-info-button:hover {
+  background: #ccc;
+  }
 }
 
   /* about section*/
@@ -297,9 +350,10 @@ height:40vh;
   padding: 10rem 5rem;
   background-color:#B3B7EE;
   display: flex;
+  font-size: x-large;
 }
 
-.container {
+.about .container {
   width: 100%;
   height: auto;
   display: flex;
@@ -348,7 +402,7 @@ height:40vh;
     content: '';
     right: 0;
     top: 150%;
-    transform: translateY(-106%) translateX(-50%);
+    transform: translateY(-116%) translateX(-80%);
     width: 30%;
     height: 35%;
     background-color: rgba(15, 118, 228, 0.158);
@@ -357,16 +411,58 @@ height:40vh;
 
 @media screen and (max-width: 768px) {
   .about .about-info{
- display: flex;
- display: table-column;
+  display: flex;
+  display: table-column;
+  width: 55vw;
+  text-align: left;
+  padding-right: 0;
+  margin-left: -20px;
+
   }
+
+  .about .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about .about-img {
+    display: block;
+    z-index:0;
+    width: 0px;
+    height: 0px;
+    margin-top: 0px;
+  }
+
   .about .about-img .img{
     width: 200px;
     height: 200px ;
   }
+
+  .about .about-img .about-img-wrapper img {
+    margin-top: 50px;
+    display: block;
+    height: 22vh;
+    width: 56vw;
+    transform: translateY(130%) translateX(-7%);
 }
 
-/* hrie section */
+.about .about-img .about-img-wrapper::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 150%;
+  transform: translateY(-10%) translateX(37%);
+  width: 60%;
+  height: 26%;
+  background-color: rgba(15, 118, 228, 0.158);
+  z-index: -1;
+}
+}
+
+/* hire section */
 .hire .hire-button {
   padding: 2rem 3rem;
   display: inline-block;
@@ -378,6 +474,7 @@ height:40vh;
   margin-top: 10px;
   color: whitesmoke;
   transition: .3s ease background-color;
+  font-size: x-large;
 }
 
 .hire .hire-button:hover {
@@ -390,9 +487,10 @@ height:40vh;
     min-height: 60vh;
     padding: 10rem 5rem;
     background-color: #9395D3;
+    text-align: center;
   } 
 
-.container {
+  .services .container {
   width: 100%;
   height: auto;
   display: flex;
@@ -405,6 +503,10 @@ height:40vh;
   .services-info {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
+  }
+
+  .services-header-desc{
+    font-size: x-large;
   }
   
   .flip-card {
@@ -476,15 +578,6 @@ height:40vh;
     transform: translatey(-22px);
   }
 
-  @media screen and (max-width: 768px) {
-  .services-info {
-    flex-direction: column;
-  }
-  .hamburgerNav{
-    visibility: visible;
-  }
-}
-
 .services-info .flip-card .flip-card-inner .flip-card-front i {
   font-size: 4rem;    position: absolute;
   left: 0;
@@ -498,9 +591,98 @@ height:40vh;
   justify-content: center;
   background-color: rgba(0, 89, 255, 0.13);
   padding: 10px;
-  
-
 }
+
+  @media screen and (max-width: 768px) {
+  .services-info {
+    flex-direction: column;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 80vw;
+    height: 250px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 80vw;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 80vw;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #A2A3BBbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #B3B7EE;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card1 {
+    background-size: cover;
+    height: 250px;
+    width: 80vw;
+    background-position: bottom;
+    color: black;
+    transform: translatey(-22px);
+  }
+
+  .flip-card2 {
+    background-size: cover;
+    height: 250px;
+    width: 80vw;
+    background-repeat: no-repeat;
+    background-image: url(./flipCardImg2.jpg);
+    background-position: bottom;
+    color:white;
+    transform: translatey(-22px);
+  }
+
+  .flip-card3 {
+    background-size: cover;
+    height: 250px;
+    width: 80vw;
+    background-position: bottom;
+    color: black;
+    transform: translatey(-22px);
+  }
+
+.services-info .flip-card .flip-card-inner .flip-card-front i {
+  font-size: 4rem;    position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80vw;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 89, 255, 0.13);
+  padding: 10px;
+}
+}
+
   /* hire section */
   .hire {
     min-height: 10vh;
@@ -508,15 +690,17 @@ height:40vh;
     width: 100%;
     background-color:#A2A3BB;
     padding: 3rem 2rem;
+    text-align: center;
 }
 
-.container {
+.hire .container {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
   /* footer section */
   .footer{
     min-height: 20vh;
@@ -528,7 +712,7 @@ height:40vh;
     padding: 5rem;
   }
   
-  .container{
+  .footer .container{
     width: 100%;
     height: auto;
     display: flex;
@@ -539,6 +723,19 @@ height:40vh;
   .footer .footer-social-follow .footer-social-follow-icon{
     font-size: 2rem;
   }
+
+  @media screen and (max-width: 768px) {
+    .footer {
+      min-height: 20vh;
+      width: 100%;
+      background-color:#000807;
+      color: white;
+      flex-direction: column;
+      text-align: center;
+      padding: 5rem;
+    }
+  }
+  
 
 /* junk
 .nav-item::after {
