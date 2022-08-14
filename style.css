@@ -351,6 +351,8 @@ height:40vh;
   background-color:#B3B7EE;
   display: flex;
   font-size: x-large;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .about .container {
@@ -377,7 +379,6 @@ height:40vh;
   text-transform: uppercase;
   letter-spacing: .2rem;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .about .about-info .about-info-button:hover {
@@ -402,7 +403,7 @@ height:40vh;
     content: '';
     right: 0;
     top: 150%;
-    transform: translateY(-116%) translateX(-80%);
+    transform: translateY(-156%) translateX(-80%);
     width: 30%;
     height: 35%;
     background-color: rgba(15, 118, 228, 0.158);
@@ -446,7 +447,7 @@ height:40vh;
     display: block;
     height: 22vh;
     width: 56vw;
-    transform: translateY(130%) translateX(-7%);
+    transform: translateY(185%) translateX(-7%);
 }
 
 .about .about-img .about-img-wrapper::after {
@@ -454,8 +455,8 @@ height:40vh;
   content: '';
   right: 0;
   top: 150%;
-  transform: translateY(-10%) translateX(37%);
-  width: 60%;
+  transform: translateY(-14%) translateX(36%);
+  width: 64%;
   height: 26%;
   background-color: rgba(15, 118, 228, 0.158);
   z-index: -1;
@@ -488,6 +489,8 @@ height:40vh;
     padding: 10rem 5rem;
     background-color: #9395D3;
     text-align: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
   } 
 
   .services .container {
@@ -709,7 +712,8 @@ height:40vh;
     color: white;
     flex-direction: column;
     text-align: center;
-    padding: 5rem;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
   
   .footer .container{
@@ -732,7 +736,6 @@ height:40vh;
       color: white;
       flex-direction: column;
       text-align: center;
-      padding: 5rem;
     }
   }
   
