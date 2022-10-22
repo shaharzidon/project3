@@ -1,4 +1,4 @@
-# Abandoned-animals-inspector
+# Digital Nomad's Resume
 
 The Digital Nomad's resume website, is a mini-project that was made to implement the first skills i learned in Front-End.
 
