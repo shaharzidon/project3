@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "cloudinary-core": "^2.13.0"
   }
 }
