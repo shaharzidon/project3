@@ -30,7 +30,7 @@ In the project directory, you can run:
 
 This is the home-section. When clicking the navigation-bar buttons (on top), it leads to the specific section you clicked on.
 
-![alt text](https://res.cloudinary.com/shaharcloud/image/upload/v1666462279/MyProjects/Screen_Shot_2022-10-22_at_21.10.34_iidou4.png)
+![alt text](https://res.cloudinary.com/shaharcloud/image/upload/v1666462296/MyProjects/Screen_Shot_2022-10-22_at_20.41.35_df738u.png)
 
 ## Technologies <a name="Technologies"></a>
 
